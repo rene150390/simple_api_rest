@@ -30,6 +30,7 @@ public class HandleRequestUtils {
 				result.setDieasel(model.getDieasel());
 				result.setFechaaplicacion(model.getFechaaplicacion());
 				result.setRfc(model.getRfc());
+				result.setId_gass(model.get_id());
 			}
 		}
 		

@@ -43,8 +43,8 @@ public class DataOperationsDaoImpl implements DataOperationsDAO{
 			StringBuilder sqlBuilder = new StringBuilder();
 			sqlBuilder
 				.append("INSERT INTO GAS_STATION (CALLE, RFC, DATE_INSERTED, REGULAR, COLONIA, NUMERO_PERMISO, FECHA_APLICACION, PERMISO_ID, LONGITUDE, "
-						+ "LATITUDE, PREMIUM, RAZON_SOCIAL, CODIGO_POSTAL, DIESEL) ")
-				.append("values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+						+ "LATITUDE, PREMIUM, RAZON_SOCIAL, CODIGO_POSTAL, DIESEL, ID_GASS) ")
+				.append("values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			
 			String sql = sqlBuilder.toString();
 			Connection conn = null;
@@ -66,6 +66,7 @@ public class DataOperationsDaoImpl implements DataOperationsDAO{
 				pstmt.setString(12, model.getRazonsocial());
 				pstmt.setString(13, model.getCodigopostal());
 				pstmt.setString(14, model.getDieasel());
+				pstmt.setString(15, model.getId_gass());
 				pstmt.executeUpdate();
 			   
 			  } catch (SQLException e) {

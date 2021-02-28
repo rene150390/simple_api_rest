@@ -3,6 +3,7 @@ package com.api.rest.gas.station.rene.json.model;
 public class FuelStationModel {
 	
 	private String _id;
+	private String id_gass;
 	private String calle;
 	private String rfc;
 	private String date_insert;
@@ -138,6 +139,14 @@ public class FuelStationModel {
 
 	public void setDieasel(String dieasel) {
 		this.dieasel = dieasel;
+	}
+
+	public String getId_gass() {
+		return id_gass;
+	}
+
+	public void setId_gass(String id_gass) {
+		this.id_gass = id_gass;
 	}
 
 }
